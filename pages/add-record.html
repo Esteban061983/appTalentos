@@ -1,0 +1,72 @@
+<div id="add-record-section" class="card">
+    <h2 class="text-xl font-semibold mb-4">Agregar Resultado de Prueba Individual</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+            <label for="student-name" class="block text-sm font-medium text-gray-700">Nombre del Alumno:</label>
+            <input type="text" id="student-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" placeholder="Escribe el nombre del alumno...">
+            <ul id="autocomplete-results"></ul>
+        </div>
+        <div>
+            <label for="student-age" class="block text-sm font-medium text-gray-700">Edad:</label>
+            <input type="number" id="student-age" step="1" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        </div>
+        <div>
+            <label for="student-sex" class="block text-sm font-medium text-gray-700">Sexo:</label>
+            <select id="student-sex" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">-- Seleccionar Sexo --</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+        </div>
+        <div>
+            <label for="student-height" class="block text-sm font-medium text-gray-700">Estatura (cm):</label>
+            <input type="number" id="student-height" step="0.1" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        </div>
+        <div>
+            <label for="student-course" class="block text-sm font-medium text-gray-700">Curso:</label>
+            <input type="text" id="student-course" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        </div>
+        <div>
+            <label for="student-school" class="block text-sm font-medium text-gray-700">Escuela:</label>
+            <select id="student-school" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">-- Seleccionar Escuela --</option>
+                <option value="EEP9">EEP9</option>
+                <option value="EEST3">EEST3</option>
+                <option value="EEP2">EEP2</option>
+                <option value="EEST1">EEST1</option>
+                <option value="EES5">EES5</option>
+            </select>
+        </div>
+        <div>
+            <label for="student-district" class="block text-sm font-medium text-gray-700">Distrito:</label>
+            <select id="student-district" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">-- Seleccionar Distrito --</option>
+                <option value="Vicente Lopez">Vicente Lopez</option>
+                <option value="San Isidro">San Isidro</option>
+            </select>
+        </div>
+        <div>
+            <label for="test-type" class="block text-sm font-medium text-gray-700">Tipo de Prueba:</label>
+            <select id="test-type" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">-- Seleccionar Prueba --</option>
+                <option value="speed30m">Velocidad 30m</option>
+                <option value="situps30s">Abdominales Rectos 30s</option>
+                <option value="obliqueSitups30s">Abdominales Inferiores 30s</option>
+                <option value="longJump">Salto Largo</option>
+                <option value="flexibility">Flexibilidad</option>
+                <option value="ropeJumps1min">Saltos con soga en 1 min</option>
+                <option value="run500m">500 metros</option>
+                <option value="pushups30s">Flexiones en 30 segundos</option>
+            </select>
+        </div>
+        <div>
+            <label for="record-date" class="block text-sm font-medium text-gray-700">Fecha:</label>
+            <input type="date" id="record-date" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        </div>
+        <div>
+            <label for="test-result" class="block text-sm font-medium text-gray-700">Resultado:</label>
+            <input type="number" id="test-result" step="0.01" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+        </div>
+    </div>
+    <button id="add-record-btn" class="mt-4 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Agregar Resultado</button>
+</div>

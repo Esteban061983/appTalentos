@@ -1,0 +1,157 @@
+<div class="report-section p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold text-center mb-6">Ficha del Alumno</h2>
+
+    <div class="mb-6 p-4 bg-gray-50 rounded-md border border-gray-200">
+        <h3 class="text-xl font-semibold mb-2" id="report-student-name"></h3>
+        <p><strong>Fecha del Reporte:</strong> <span id="report-date"></span></p>
+        <p><strong>Edad:</strong> <span id="report-student-age"></span> años</p>
+        <p><strong>Sexo:</strong> <span id="report-student-sex"></span></p>
+        <p><strong>Estatura:</strong> <span id="report-student-height"></span></p>
+        <p><strong>Curso:</strong> <span id="report-student-course"></span></p>
+        <p><strong>Escuela:</strong> <span id="report-school"></span></p>
+        <p><strong>Distrito:</strong> <span id="report-district"></span></p>
+        <p><strong>Ciclo Lectivo:</strong> <span id="report-academic-year"></span></p>
+    </div>
+
+    <div id="individual-results-container" class="space-y-8">
+        </div>
+
+    <div class="mt-8 p-4 bg-blue-50 rounded-md border border-blue-200">
+        <h4 class="text-lg font-semibold mb-2">Análisis Comparativo y Ranking</h4>
+        <div id="analysis-rows-container" class="space-y-4">
+            </div>
+    </div>
+
+    <div class="mt-8 p-4 bg-green-50 rounded-md border border-green-200">
+        <div id="evolution-analysis">
+            </div>
+    </div>
+
+    <div class="text-center mt-8">
+        <button id="print-report-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out">
+            <i class="fas fa-print mr-2"></i> Imprimir Ficha
+        </button>
+    </div>
+</div>
+
+<style>
+    /* Estilos específicos para el reporte */
+    .report-section-item {
+        background-color: #f8f8f8;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .report-content-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem; /* Espacio entre columnas */
+    }
+
+    .report-content-row > div {
+        flex: 1;
+        min-width: 300px; /* Asegura que no se hagan demasiado pequeñas */
+    }
+
+    /* Estilos para la tabla dentro del reporte */
+    .report-section-item table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .report-section-item th, .report-section-item td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0; /* gray-200 */
+    }
+
+    .report-section-item th {
+        background-color: #f1f5f9; /* gray-100 */
+        font-weight: 600;
+        color: #4a5568; /* gray-700 */
+    }
+
+    .report-section-item tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Estilos para los gráficos */
+    .chart-container {
+        position: relative;
+        height: 300px; /* Altura fija para los gráficos */
+        width: 100%;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilos para los mensajes de análisis */
+    .analysis-item-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        padding: 0.75rem;
+        border-radius: 0.375rem; /* rounded-md */
+        background-color: #f8fafc; /* gray-50 */
+        border: 1px solid #e2e8f0; /* gray-200 */
+    }
+
+    .analysis-item-row-content {
+        flex: 1;
+        min-width: 250px; /* Asegura que el texto no se comprima demasiado */
+    }
+
+    .strength {
+        color: #16a34a; /* green-600 */
+        font-weight: 600;
+    }
+
+    .weakness {
+        color: #dc2626; /* red-600 */
+        font-weight: 600;
+    }
+
+    .neutral {
+        color: #4b5563; /* gray-700 */
+    }
+
+    /* Estilos para los mensajes de evolución */
+    .evolution-message-container {
+        padding: 0.5rem 0;
+        border-radius: 0.25rem;
+    }
+
+    .evolution-message-container.positive {
+        color: #16a34a; /* green-600 */
+        font-weight: 500;
+    }
+
+    .evolution-message-container.negative {
+        color: #dc2626; /* red-600 */
+        font-weight: 500;
+    }
+
+    .evolution-message-container.neutral {
+        color: #4b5563; /* gray-700 */
+    }
+
+    /* Media Queries para responsividad */
+    @media (max-width: 768px) {
+        .report-content-row {
+            flex-direction: column;
+        }
+        .report-content-row > div {
+            min-width: unset;
+            width: 100%;
+        }
+    }
+</style>

@@ -1,0 +1,712 @@
+/* Estilos basicos para un diseno moderno y elegante */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6; /* Fondo suave */
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    max-width: 960px;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+input, select, button {
+    border-radius: 0.25rem;
+}
+
+/* Estilos para la barra de navegacion */
+.navbar {
+    background-color: #4a90e2; /* Azul */
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navbar-nav {
+    display: flex;
+    gap: 1rem;
+}
+.nav-link {
+    color: #e0e0e0; /* Gris claro */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #ffffff;
+}
+
+
+/* Estilos de tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+ tbody tr:nth-child(even) {
+     background-color: #f9f9f9;
+ }
+
+/* Estilos de botones */
+button {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.bg-blue-500 { background-color: #3b82f6; }
+.hover\:bg-blue-700:hover { background-color: #1d4ed8; }
+.generate-button { background-color: #2ecc71; } /* Verde */
+.generate-button:hover { background-color: #27ae60; }
+.compare-button { background-color: #f39c12; } /* Naranja */
+.compare-button:hover { background-color: #e67e22; }
+.delete-button { background-color: #e74c3c; } /* Rojo */
+.delete-button:hover { background-color: #c0392b; }
+ .import-button { background-color: #9b59b6; } /* Purpura */
+ .import-button:hover { background-color: #8e44ad; }
+  .export-button { background-color: #1abc9c; } /* Turquesa */
+  .export-button:hover { background-color: #16a085; }
+   .print-button { background-color: #3498db; } /* Azul */
+   .print-button:hover { background-color: #2980b9; }
+   .print-list-button { background-color: #1abc9c; } /* Turquesa */
+   .print-list-button:hover { background-color: #16a085; }
+
+/* Estilos para botones inline en tablas */
+.inline-action-btn {
+     padding: 0.25rem 0.5rem; /* Padding mas pequeno */
+     font-size: 0.875rem; /* Texto mas pequeno */
+     margin-right: 0.25rem; /* Espacio entre botones */
+}
+ .inline-action-btn i {
+     margin-right: 0.25rem; /* Espacio entre icono y texto */
+ }
+ .save-inline-edit-btn { background-color: #28a745; color: white; } /* Verde */
+ .save-inline-edit-btn:hover { background-color: #218838; }
+ .cancel-inline-edit-btn { background-color: #6c757d; color: white; } /* Gris */
+ .cancel-inline-edit-btn:hover { background-color: #5a6268; }
+ .edit-record-btn { background-color: #ffc107; color: white; } /* Amarillo */
+ .edit-record-btn:hover { background-color: #e0a800; }
+ .delete-record-btn { background-color: #dc3545; color: white; } /* Rojo */
+ .delete-record-btn:hover { background-color: #c82333; }
+
+
+/* Estilos de busqueda y resultados */
+  #search-results, #autocomplete-results { /* Aplicar estilos a ambos */
+      list-style: none;
+      padding: 0;
+      margin-top: 0.25rem;
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      max-height: 150px;
+      overflow-y: auto;
+      background-color: #fff;
+       /* Oculto por defecto */
+       display: none;
+       position: absolute; /* Posicionar absolutamente */
+       width: calc(100% - 3rem); /* Ancho ajustado al padding del card */
+       z-index: 100; /* Asegurar que este por encima de otros elementos */
+  }
+   /* Ajuste para posicionamiento relativo en el contenedor padre */
+   #view-records-section > div:nth-child(3), /* Contenedor del buscador en Ver Registros */
+   #add-record-section > div:first-child { /* Contenedor del nombre en Agregar Registro */
+       position: relative;
+   }
+
+
+   #search-results.visible, #autocomplete-results.visible {
+       display: block; /* Mostrar cuando se aplica la clase visible */
+   }
+  #search-results li, #autocomplete-results li { /* Aplicar estilos a ambos */
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.2s ease;
+  }
+   #search-results li:last-child, #autocomplete-results li:last-child { /* Aplicar estilos a ambos */
+       border-bottom: none;
+   }
+  #search-results li:hover, #autocomplete-results li:hover { /* Aplicar estilos a ambos */
+      background-color: #f9f9f9;
+  }
+
+
+/* Estilos para graficos */
+.chart-container {
+    margin-top: 1.5rem;
+     /* Estilos para hacer los graficos mas pequenos y agradables */
+     width: 100%; /* Ocupa todo el width del contenedor padre */
+     max-width: 400px; /* Ancho maximo */
+     margin-left: auto; /* Centrar */
+     margin-right: auto; /* Centrar */
+     height: 250px; /* Altura fija para el contenedor del grafico */
+}
+ .chart-container canvas {
+     max-height: 100%; /* Permitir que el canvas ocupe la altura maxima del contenedor */
+     width: 100% !important; /* Forzar ancho al 100% */
+     height: auto !important; /* Permitir que la altura se ajuste automaticamente */
+}
+
+ .report-section-item {
+     margin-bottom: 2rem; /* Espacio entre secciones de prueba/estatura */
+     padding-bottom: 1rem;
+     border-bottom: 1px dashed #ccc; /* Separador visual */
+ }
+ .report-section-item:last-child {
+     border-bottom: none; /* No hay separador en el ultimo elemento */
+     margin-bottom: 0;
+     padding-bottom: 0;
+ }
+ .report-section-item h3 {
+     text-align: center; /* Centrar titulos de seccion */
+     margin-bottom: 1rem;
+ }
+
+ /* Estilos para la tabla de impresion de lista de alumnos */
+ #printable-student-list {
+     display: none; /* Oculto por defecto */
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 20px;
+ }
+ #printable-student-list th,
+ #printable-student-list td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: left;
+ }
+ #printable-student-list th {
+     background-color: #f2f2f2;
+ }
+
+/* Estilos para la distribucion de tabla y grafico en la ficha */
+.report-content-row {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Por defecto en columnas para pantallas pequenas */
+    gap: 1.5rem; /* Espacio entre tabla y grafico */
+}
+
+@media (min-width: 768px) { /* Aplicar a partir de tamano md (Tailwind) */
+    .report-content-row {
+        flex-direction: row; /* En filas para pantallas medianas y grandes */
+    }
+    .report-content-row > div {
+         width: 50%; /* Cada columna ocupa la mitad */
+    }
+     /* Ajustar el margen del grafico para que no se centre cuando esta al lado de la tabla */
+     .report-content-row .chart-container {
+         margin-left: 0;
+         margin-right: 0;
+     }
+}
+
+ /* Estilos para la seccion de comparativo */
+ #comparison-results > div:first-child { /* Contenedor principal de resultados del comparativo */
+     position: relative; /* Para posicionar el promedio */
+ }
+
+ #comparison-results h3 {
+     display: inline-block; /* Para que el promedio se alinee al lado */
+     margin-right: 1rem; /* Espacio entre titulo y promedio */
+ }
+
+ #average-result-container {
+     display: inline-block; /* Para que este al lado del titulo */
+     vertical-align: middle; /* Alinear verticalmente con el titulo */
+     background-color: #e9ecef; /* Fondo gris claro */
+     border-radius: 0.5rem;
+     padding: 0.5rem 1rem; /* Padding */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+     font-weight: bold;
+     color: #007bff; /* Azul */
+     font-size: 1rem; /* Tamano de fuente */
+ }
+
+ #comparison-table {
+     margin-top: 1rem; /* Espacio entre el titulo/promedio y la tabla */
+ }
+
+ /* Estilos para el resumen de comparacion avanzada */
+ #advanced-comparison-summary {
+     margin-top: 2rem;
+     padding-top: 1.5rem;
+     border-top: 1px solid #ddd;
+ }
+ #advanced-comparison-summary h4 {
+     font-size: 1.2rem;
+     font-weight: 600;
+     margin-bottom: 1rem;
+ }
+ #advanced-comparison-summary ul {
+     list-style: none;
+     padding: 0;
+ }
+ #advanced-comparison-summary li {
+     background-color: #f9f9f9;
+     border: 1px solid #eee;
+     border-radius: 0.25rem;
+     padding: 0.75rem;
+     margin-bottom: 0.5rem;
+ }
+ #advanced-comparison-summary li strong {
+     color: #4a90e2; /* Azul */
+ }
+
+ /* Estilos para el contenedor del grafico de comparacion */
+ #comparison-chart-container {
+     margin-top: 2rem;
+     width: 100%; /* Ocupa todo el ancho */
+     max-width: 600px; /* Ancho maximo para el grafico */
+     margin-left: auto;
+     margin-right: auto;
+     height: 300px; /* Altura del contenedor del grafico */
+ }
+  #comparison-chart-container canvas {
+      max-height: 100%;
+      width: 100% !important;
+      height: auto !important;
+  }
+
+ /* Estilos para el nuevo multi-select con checkboxes */
+ .multi-select-container {
+     position: relative; /* Para posicionar el dropdown */
+ }
+ .multi-select-input {
+     cursor: pointer; /* Indica que es clickeable */
+     background-color: #fff;
+     padding-right: 2rem; /* Espacio para el icono */
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 0 01-1.414 0l-4-4a1 0 010-1.414z' clip-rule='evenodd' /%3E%3Csvg%3E"); /* Icono de flecha hacia abajo */
+     background-repeat: no-repeat;
+     background-position: right 0.5rem center;
+     background-size: 1.5em;
+ }
+ .multi-select-dropdown {
+     position: absolute;
+     top: 100%; /* Debajo del input */
+     left: 0;
+     right: 0;
+     z-index: 50; /* Por encima de otros elementos */
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 0.25rem;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     max-height: 200px;
+     overflow-y: auto;
+     padding: 0.5rem;
+     display: none; /* Oculto por defecto */
+ }
+ .multi-select-dropdown.visible {
+     display: block; /* Mostrar cuando es visible */
+ }
+ .multi-select-dropdown label {
+     display: block; /* Cada opcion en una linea */
+     padding: 0.25rem 0.5rem;
+     cursor: pointer;
+ }
+ .multi-select-dropdown label:hover {
+     background-color: #f2f2f2;
+ }
+ .multi-select-dropdown input[type="checkbox"] {
+     margin-right: 0.5rem;
+ }
+
+/* Estilos para la seccion de datos del alumno y analisis */
+#student-data-and-analysis {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Por defecto en columnas para pantallas pequenas */
+    gap: 1.5rem; /* Espacio entre las dos columnas */
+}
+
+#student-data-display {
+     width: 100%; /* Ocupa todo el ancho en movil */
+}
+ #student-analysis {
+     width: 100%; /* Ocupa todo el ancho en movil */
+     /* gap: 1.5rem; /* Espacio entre las sub-secciones de analisis - Removido para controlar gap con margin-bottom en las filas */
+ }
+  #student-analysis > .analysis-titles { /* Contenedor de titulos de analisis (usando grid para alinear con las filas de analisis) */
+       width: 100%; /* Ocupan todo el ancho */
+       display: grid; /* Usar grid para los titulos */
+       grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+       gap: 1.5rem; /* Espacio entre columnas de titulos */
+       margin-bottom: 1rem; /* Espacio debajo de los titulos */
+  }
+   #student-analysis > .analysis-titles > div {
+       width: 100%; /* Asegurar que los divs dentro del grid ocupen el ancho */
+   }
+   #student-analysis > .analysis-titles h4 {
+       margin-bottom: 0; /* Eliminar margen inferior del titulo */
+       border-bottom: none; /* Eliminar borde inferior del titulo */
+       padding-bottom: 0; /* Eliminar padding inferior del titulo */
+   }
+
+
+ /* Contenedor para cada par de analisis (promedio + ranking) por prueba */
+ .analysis-item-row {
+     display: flex; /* Usar flexbox */
+     flex-direction: column; /* Por defecto en columnas para pantallas pequenas */
+     gap: 1rem; /* Espacio entre analisis de promedio y ranking */
+     margin-bottom: 1rem; /* Espacio entre filas de pruebas */
+     padding-bottom: 0.5rem;
+     border-bottom: 1px dashed #eee; /* Separador visual */
+ }
+  .analysis-item-row:last-child {
+      border-bottom: none; /* Sin borde en el ultimo elemento */
+  }
+ .analysis-item-row > div { /* Contenedores individuales dentro de la fila (promedio y ranking) */
+     width: 100%; /* Ocupan todo el ancho en movil */
+ }
+
+ /* Estilos para el mensaje de evolucion */
+ .evolution-message-container { /* Nuevo contenedor para el mensaje de evolucion */
+      margin-top: 0.5rem; /* Espacio arriba */
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.9rem;
+      width: 100%; /* Ocupa todo el ancho disponible */
+ }
+  .evolution-message-container.positive {
+      background-color: #d4edda; /* Verde claro */
+      border: 1px solid #c3e6cb;
+      color: #155724; /* Verde oscuro */
+  }
+   .evolution-message-container.negative {
+      background-color: #f8d7da; /* Rojo claro */
+      border: 1px solid #f5c6cb;
+      color: #721c24; /* Rojo oscuro */
+   }
+
+
+@media (min-width: 768px) { /* Aplicar a partir de tamano md (Tailwind) */
+    #student-data-and-analysis {
+        flex-direction: row; /* En filas para pantallas medianas y grandes */
+    }
+    #student-data-display {
+        width: 50%; /* Ocupa la mitad en desktop */
+    }
+     #student-analysis {
+         width: 50%; /* Ocupa la mitad en desktop */
+     }
+      #student-analysis > .analysis-titles {
+           gap: 1.5rem; /* Mantener el mismo gap que las filas de analisis */
+      }
+     .analysis-item-row {
+          flex-direction: row; /* En filas para pantallas medianas y grandes */
+          gap: 1.5rem; /* Espacio entre columnas de analisis */
+     }
+     .analysis-item-row > div { /* Contenedores individuales dentro de la fila (promedio y ranking) */
+         width: 50%; /* Cada analisis ocupa la mitad en desktop */
+     }
+      .evolution-message-container { /* Estilos para desktop */
+           width: 100%; /* Sigue ocupando todo el ancho en desktop */
+      }
+}
+
+/* Estilos para la seccion de analisis */
+#student-analysis h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+#student-analysis ul {
+    list-style: none;
+    padding: 0;
+}
+#student-analysis li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+/* Estilos para analisis por promedio de edad */
+/* Aplicados a los divs dentro de .analysis-item-row */
+ .analysis-item-row .strength {
+    background-color: #e9f7ef; /* Verde claro */
+    border: 1px solid #d0e9d7;
+    color: #28a745; /* Verde oscuro */
+    padding: 0.75rem; /* Anadir padding para que se vea como una tarjeta */
+    border-radius: 0.25rem; /* Anadir borde redondeado */
+ }
+  .analysis-item-row .weakness {
+    background-color: #fdedee; /* Rojo claro */
+    border: 1px solid #fbcbd2;
+    color: #dc3545; /* Rojo oscuro */
+     padding: 0.75rem; /* Anadir padding para que se vea como una tarjeta */
+    border-radius: 0.25rem; /* Anadir borde redondeado */
+ }
+  .analysis-item-row .neutral {
+    background-color: #f8f9fa; /* Gris muy claro */
+    border: 1px solid #e9ecef;
+    color: #6c757d; /* Gris */
+     padding: 0.75rem; /* Anadir padding para que se vea como una tarjeta */
+    border-radius: 0.25rem; /* Anadir borde redondeado */
+ }
+/* Estilos para analisis de ranking (sin fondo de color en el li) */
+ /* Aplicados a los divs dentro de .analysis-item-row */
+ .analysis-item-row .ranking-item {
+     background-color: transparent; /* Fondo transparente */
+     border: none; /* Sin borde */
+     padding: 0.75rem; /* Restaurar padding para que se alinee con los otros */
+     margin-bottom: 0; /* Espacio reducido */
+     border-radius: 0.25rem; /* Anadir borde redondeado */
+      border: 1px solid #e9ecef; /* Anadir borde gris claro */
+      background-color: #f8f9fa; /* Anadir fondo gris claro */
+ }
+ /* Estilos para los iconos de ranking individual */
+ .analysis-item-row .ranking-item i.fa-star {
+     color: #f39c12; /* Amarillo/Naranja para talento individual */
+ }
+  .analysis-item-row .ranking-item i.fa-medal {
+     color: #95a5a6; /* Gris para distincion individual */
+  }
+
+
+ /* Estilos para las nuevas distinciones olimpicas generales */
+ #general-olympic-distinctions li { /* Aplicar a los li en la nueva lista */
+     font-weight: bold;
+     padding: 0.75rem; /* Restaurar padding para estas distinciones */
+     margin-bottom: 0.5rem; /* Restaurar margen para estas distinciones */
+     border-radius: 0.25rem; /* Restaurar borde redondeado */
+ }
+  #general-olympic-distinctions i.fa-medal.gold {
+     color: #FFD700; /* Oro */
+ }
+  #general-olympic-distinctions i.fa-trophy.gold {
+     color: #FFD700; /* Oro */
+ }
+  #general-olympic-distinctions li.double-gold {
+       background-color: #fff3cd; /* Amarillo claro */
+       border: 1px solid #ffeeba;
+       color: #856404; /* Amarillo oscuro */
+  }
+  #general-olympic-distinctions li.triple-crown {
+       background-color: #d4edda; /* Verde muy claro */
+       border: 1px solid #c3e6cb;
+       color: #155724; /* Verde oscuro */
+  }
+  #general-olympic-distinctions li.quad-crown { /* Nueva clase para 4+ Top 5 */
+       background-color: #cfe2ff; /* Azul muy claro */
+       border: 1px solid #b9d1ea;
+       color: #084298; /* Azul oscuro */
+  }
+
+ /* Estilos para los iconos al lado del nombre (Top 1 en 3+ pruebas) */
+ #selected-student-name-display .top1-distinction-icons {
+     margin-left: 0.5rem; /* Espacio entre el nombre y los iconos */
+     vertical-align: middle; /* Alinear verticalmente */
+ }
+  #selected-student-name-display .top1-distinction-icons i.fa-crown {
+      color: #FFD700; /* Dorado */
+  }
+   #selected-student-name-display .top1-distinction-icons i.fa-gem {
+      color: #17a2b8; /* Turquesa */
+   }
+
+
+ #student-analysis li strong {
+     margin-right: 0.5rem;
+ }
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #report-section, #report-section * {
+        visibility: visible;
+    }
+     #comparison-section, #comparison-section * {
+        visibility: visible;
+         /* Asegurar que la tabla y estadisticas del comparativo se muestren */
+         display: block !important; /* Anular flexbox en impresion si se usara */
+     }
+     #comparison-results {
+         display: block !important; /* Anular flexbox en impresion si se usara */
+     }
+      #comparison-results > div {
+           width: 100% !important; /* Ocupa todo el ancho en impresion */
+      }
+     #average-result-container {
+         display: block !important; /* Mostrar como bloque en impresion */
+         margin-bottom: 1rem; /* Espacio debajo en impresion */
+         text-align: left !important; /* Alinear texto a la izquierda en impresion */
+         padding: 0.25rem 0.5rem; /* Padding mas pequeno en impresion */
+         box-shadow: none !important; /* Sin sombra en impresion */
+     }
+     #comparison-results h3 {
+         display: block !important; /* Mostrar como bloque en impresion */
+         margin-right: 0 !important; /* Eliminar margen a la derecha en impresion */
+         margin-bottom: 0.5rem !important; /* Espacio debajo del titulo en impresion */
+     }
+
+     #advanced-comparison-summary {
+          display: block !important; /* Asegurar que se muestre en impresion */
+          margin-top: 1rem !important;
+          padding-top: 0.5rem !important;
+          border-top: 1px solid #ddd !important;
+     }
+     #advanced-comparison-summary h4 {
+          font-size: 1rem !important;
+          margin-bottom: 0.5rem !important;
+     }
+     #advanced-comparison-summary ul {
+          padding-left: 1rem !important; /* Anadir padding para la lista en impresion */
+     }
+     #advanced-comparison-summary li {
+         background-color: transparent !important; /* Fondo transparente en impresion */
+         border: none !important; /* Sin borde en impresion */
+         padding: 0.25rem 0 !important; /* Padding reducido en impresion */
+         margin-bottom: 0.25rem !important; /* Espacio reducido en impresion */
+     }
+
+     #comparison-chart-container {
+          display: block !important; /* Asegurar que se muestre en impresion */
+          margin-top: 1rem !important;
+          width: 100% !important; /* Ocupa todo el ancho en impresion */
+          max-width: none !important; /* Eliminar ancho maximo en impresion */
+          height: auto !important; /* Altura automatica en impresion */
+     }
+     #comparison-chart-container canvas {
+          width: 100% !important;
+          height: auto !important;
+     }
+
+     #student-data-and-analysis {
+          display: block !important; /* Anular flexbox en impresion */
+     }
+     #student-data-display, #student-analysis {
+          width: 100% !important; /* Ocupan todo el ancho en impresion */
+          margin-bottom: 1rem; /* Espacio entre secciones en impresion */
+     }
+      #student-analysis {
+           margin-top: 1rem; /* Espacio arriba en impresion */
+           border-top: 1px solid #ddd; /* Separador visual en impresion */
+           padding-top: 1rem;
+            display: block !important; /* Anular flexbox en impresion */
+            gap: 0 !important; /* Eliminar gap en impresion */
+      }
+      /* Ajustes para la nueva estructura de analisis por prueba en impresion */
+      #student-analysis > .analysis-titles {
+          display: block !important; /* Apilar titulos en impresion */
+          gap: 0 !important;
+          margin-bottom: 0.5rem !important;
+      }
+      #student-analysis > .analysis-titles > div {
+          width: 100% !important;
+          margin-bottom: 0.25rem !important;
+      }
+       #student-analysis > .analysis-titles h4 {
+           border-bottom: none !important;
+           padding-bottom: 0 !important;
+           margin-bottom: 0 !important;
+       }
+
+      .analysis-item-row {
+          display: block !important; /* Apilar en impresion */
+          gap: 0 !important;
+          margin-bottom: 0.5rem !important;
+          padding-bottom: 0.25rem !important;
+          border-bottom: 1px dashed #eee !important;
+      }
+      .analysis-item-row > div { /* Contenedores individuales dentro de la fila */
+          width: 100% !important;
+          margin-bottom: 0.25rem !important;
+      }
+      .analysis-item-row .ranking-item {
+          padding: 0 !important; /* Eliminar padding en impresion */
+          margin-bottom: 0 !important; /* Eliminar margen en impresion */
+      }
+       #general-olympic-distinctions li {
+           background-color: transparent !important;
+           border: none !important;
+           padding: 0.1rem 0 !important;
+           margin-bottom: 0.1rem !important;
+       }
+
+       .evolution-message-container { /* Estilos para impresion */
+            margin-top: 0.25rem !important;
+            padding: 0.25rem !important;
+            font-size: 0.8rem !important;
+            background-color: transparent !important;
+            border: none !important;
+            color: inherit !important; /* Usar color de texto normal */
+       }
+
+
+      #student-analysis ul {
+           padding-left: 1rem !important; /* Anadir padding para la lista en impresion */
+      }
+      #student-analysis li {
+          background-color: transparent !important; /* Fondo transparente en impresion */
+          border: none !important; /* Sin borde en impresion */
+          padding: 0.1rem 0 !important; /* Padding reducido en impresion */
+          margin-bottom: 0.1rem !important; /* Espacio reducido en impresion */
+      }
+      /* Asegurar que los iconos al lado del nombre se muestren */
+      #selected-student-name-display .top1-distinction-icons {
+          display: inline !important;
+          margin-left: 0.2rem !important;
+      }
+
+
+     #printable-student-list, #printable-student-list * { /* Hacer visible la tabla de impresion */
+         visibility: visible;
+     }
+
+    .print-button, .generate-button, .compare-button, .delete-button, .import-button, .export-button, #search-input, #search-results, .navbar, #view-records-section .grid, #view-records-section button:not(.print-list-button), #view-records-section label, #view-records-section select, #view-records-section input:not(#search-input), .back-button, .app-footer, #autocomplete-results, .inline-action-btn, #student-data-display button { /* Oculta elementos de UI, barra de navegacion, footer y botones de accion inline en la impresion */
+        display: none;
+    }
+     /* Asegura que los graficos se muestren correctamente en la impresion */
+    .chart-container {
+        page-break-inside: avoid;
+         width: 50% !important; /* Forzar ancho al 50% en impresion */
+         height: auto !important; /* Permitir que la altura se ajuste */
+         margin: 0 !important; /* Eliminar margen */
+    }
+    canvas {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+     /* Asegurar que las tablas individuales se muestren en la impresion */
+     .report-section-item table {
+         display: table;
+         width: 50% !important; /* Forzar ancho al 50% en impresion */
+     }
+
+     /* Asegurar que la fila de contenido del reporte use flexbox en impresion */
+     .report-content-row {
+         display: flex;
+         flex-direction: row; /* Forzar a fila en impresion */
+         gap: 1rem; /* Espacio entre columnas en impresion */
+     }
+     /* Asegurar que las celdas de accion no se muestren en la impresion */
+     .report-section-item table td:last-child,
+     .report-section-item table th:last-child {
+         display: none;
+     }
+}

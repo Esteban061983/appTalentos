@@ -1,0 +1,90 @@
+<div id="comparison-section" class="card">
+    <h2 class="text-xl font-semibold mb-4">Comparativo entre Alumnos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+            <label for="filter-age" class="block text-sm font-medium text-gray-700">Filtrar por Edad:</label>
+            <select id="filter-age" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">Todas las Edades</option>
+            </select>
+        </div>
+        <div>
+            <label for="filter-sex" class="block text-sm font-medium text-gray-700">Filtrar por Sexo:</label>
+            <select id="filter-sex" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">Todos los Sexos</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+        </div>
+        <div>
+            <label for="filter-course" class="block text-sm font-medium text-gray-700">Filtrar por Curso:</label>
+            <select id="filter-course" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">Todos los Cursos</option>
+            </select>
+        </div>
+        <div class="multi-select-container">
+            <label for="filter-school-input" class="block text-sm font-medium text-gray-700">Filtrar por Escuela(s):</label>
+            <input type="text" id="filter-school-input" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 multi-select-input" readonly placeholder="Seleccionar Escuela(s)">
+            <div id="filter-school-dropdown" class="multi-select-dropdown">
+                <label><input type="checkbox" value=""> Todas las Escuelas</label>
+            </div>
+        </div>
+        <div class="multi-select-container">
+            <label for="filter-district-input" class="block text-sm font-medium text-gray-700">Filtrar por Distrito(s):</label>
+            <input type="text" id="filter-district-input" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 multi-select-input" readonly placeholder="Seleccionar Distrito(s)">
+            <div id="filter-district-dropdown" class="multi-select-dropdown">
+                <label><input type="checkbox" value=""> Todos los Distritos</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="filter-test-type" class="block text-sm font-medium text-gray-700">Filtrar por Prueba:</label>
+            <select id="filter-test-type" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+                <option value="">-- Seleccionar Prueba --</option>
+                <option value="speed30m">Velocidad 30m</option>
+                <option value="situps30s">Abdominales Rectos 30s</option>
+                <option value="obliqueSitups30s">Abdominales Inferiores 30s</option>
+                <option value="longJump">Salto Largo</option>
+                <option value="flexibility">Flexibilidad</option>
+                <option value="ropeJumps1min">Saltos con soga en 1 min</option>
+                <option value="run500m">500 metros</option>
+                <option value="pushups30s">Flexiones en 30 segundos</option>
+            </select>
+        </div>
+    </div>
+    <button id="show-comparison-btn" class="mt-4 w-full compare-button">Mostrar Comparativo</button>
+
+    <div id="comparison-results" class="mt-6 hidden">
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Resultados del Comparativo</h3>
+            <span id="average-result-container">Promedio: <span id="average-result">-</span></span>
+
+            <div id="advanced-comparison-summary" class="hidden">
+                <h4>Resumen Comparativo por Grupo</h4>
+                <ul id="summary-list">
+                </ul>
+            </div>
+
+            <div id="comparison-chart-container" class="hidden">
+                <canvas id="comparison-chart"></canvas>
+            </div>
+
+            <table id="comparison-table" class="min-w-full divide-y divide-gray-200">
+                <thead>
+                    <tr>
+                        <th data-sort="name">Nombre</th>
+                        <th data-sort="age">Edad</th>
+                        <th data-sort="sex">Sexo</th>
+                        <th data-sort="course">Curso</th>
+                        <th data-sort="school">Escuela</th>
+                        <th data-sort="district">Distrito</th>
+                        <th data-sort="date">Fecha del Resultado</th>
+                        <th data-sort="academicYear">Ciclo Lectivo</th>
+                        <th data-sort="result">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody id="comparison-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
